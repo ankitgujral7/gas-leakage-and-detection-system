@@ -18,7 +18,7 @@ void setup() {
  lcd.setCursor(3,0);
  lcd.print("welcome to"); 
  lcd.setCursor(1,1);
- lcd.print("Infinite Xpro"); 
+ lcd.print("Gas leakage Detection"); 
  delay(5000);     
 }
 
@@ -55,7 +55,7 @@ void SendTextMessage()
 {
   mySerial.println("AT+CMGF=1");    //To send SMS in Text Mode
   delay(1000);
-  mySerial.println("AT+CMGS=\"+91017#########\"\r");  // change to the phone number you using
+  mySerial.println("AT+CMGS=\"+91##########\"\r");  // change to the phone number you using
   delay(1000);
   mySerial.println("Gas Leaking!");//the content of the message
   delay(200);
