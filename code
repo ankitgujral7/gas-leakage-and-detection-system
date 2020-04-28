@@ -9,7 +9,7 @@ int gasvalue;
 
 void setup() {
   
- lcd.init();                       // initialize the lcd
+ lcd.init();                       
  lcd.init();
  lcd.backlight(); 
  mySerial.begin(9600);
@@ -53,13 +53,13 @@ void loop() {
 
 void SendTextMessage()
 {
-  mySerial.println("AT+CMGF=1");    //To send SMS in Text Mode
+  mySerial.println("AT+CMGF=1");   
   delay(1000);
-  mySerial.println("AT+CMGS=\"+91##########\"\r");  // change to the phone number you using
+  mySerial.println("AT+CMGS=\"+91##########\"\r"); 
   delay(1000);
-  mySerial.println("Gas Leaking!");//the content of the message
+  mySerial.println("Gas Leaking!");
   delay(200);
-  mySerial.println((char)26);//the stopping character
+  mySerial.println((char)26);
   delay(1000);
   
 }
